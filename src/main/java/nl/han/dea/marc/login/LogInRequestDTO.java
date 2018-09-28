@@ -1,6 +1,6 @@
-package nl.han.dea.marc;
+package nl.han.dea.marc.login;
 
-public class LogInResponseDTO {
+public class LogInRequestDTO {
     private String user;
     private String token;
 

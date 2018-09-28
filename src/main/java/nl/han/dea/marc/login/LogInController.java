@@ -1,4 +1,4 @@
-package nl.han.dea.marc;
+package nl.han.dea.marc.login;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
