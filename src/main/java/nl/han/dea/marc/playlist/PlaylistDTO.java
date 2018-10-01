@@ -1,10 +1,23 @@
 package nl.han.dea.marc.playlist;
 
-import java.util.ArrayList;
-
 public class PlaylistDTO {
 
-    private ArrayList playlists = new ArrayList();
-    private ArrayList playlist = new ArrayList();
+    private Playlist playlist;
+    private Track tracks;
 
+    public Playlist getPlaylist() {
+        return playlist;
+    }
+
+    public void setPlaylist(Playlist playlist) {
+        this.playlist = playlist;
+    }
+
+    public Track getTracks() {
+        return tracks;
+    }
+
+    public void setTracks(Track tracks) {
+        this.tracks = tracks;
+    }
 }

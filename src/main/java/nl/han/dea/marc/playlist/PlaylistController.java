@@ -10,6 +10,7 @@ public class PlaylistController {
 
     @GET
     public Response getPlaylists () {
-        return Response.ok(PlaylistDTO).build();
+        PlaylistDTO playlistdto = new PlaylistDTO();
+        return Response.ok(playlistdto).build();
     }
 }
