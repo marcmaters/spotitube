@@ -2,7 +2,7 @@ package nl.han.dea.marc.login;
 
 public class LogInRequestDTO {
     private String user;
-    private String token;
+    private String password;
 
     public String getUser() {
         return user;
@@ -12,11 +12,11 @@ public class LogInRequestDTO {
         this.user = user;
     }
 
-    public String getToken() {
-        return token;
+    public String getPassword() {
+        return password;
     }
 
-    public void setToken(String token) {
-        this.token = token;
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

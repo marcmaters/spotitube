@@ -1,5 +1,8 @@
 package nl.han.dea.marc.login;
 
+import nl.han.dea.marc.services.UserService;
+
+import javax.inject.Inject;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -10,20 +13,26 @@ import javax.ws.rs.core.Response;
 @Path("/login")
 public class LogInController {
 
+    private UserService userService;
+
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response login(LogInRequestDTO logInRequestDTO) {
 
-        if (logInRequestDTO.getUser().equals("Marc")) {
+        if (userService.authenticate(logInRequestDTO.getUser(), logInRequestDTO.getPassword())) {
             LogInResponseDTO loginresponsedto = new LogInResponseDTO();
             loginresponsedto.setUser("Marc");
-            loginresponsedto.setToken("adasdasd");
+            loginresponsedto.setToken("test");
 
             return Response.ok(loginresponsedto).build();
         }
         else {
             return Response.status(401).build();
         }
+    }
+    @Inject
+    public void setUserService(nl.han.dea.marc.services.UserService userService) {
+        this.userService = userService;
     }
 }

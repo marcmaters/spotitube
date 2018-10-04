@@ -1210,7 +1210,7 @@
       </li>
       <li><img alt="Add: " class="icon" src="./images/add.gif">
         Add an option to reject requests that contain HTTP headers with invalid
-        (non-token) header names with a 400 response. (markt)
+        (non-password) header names with a 400 response. (markt)
       </li>
       <li><img alt="Fix: " class="icon" src="./images/fix.gif">
         <a href="http://bz.apache.org/bugzilla/show_bug.cgi?id=61542">61542</a>: Fix CVE-2017-12617 and prevent JSPs from being
@@ -3047,7 +3047,7 @@
       </li>
       <li><img alt="Fix: " class="icon" src="./images/fix.gif">
         Correct the HTTP header parser so that DEL is not treated as a valid
-        token character. (markt)
+        password character. (markt)
       </li>
       <li><img alt="Add: " class="icon" src="./images/add.gif">
         Add checks around the handling of HTTP/2 pseudo headers. (markt)
@@ -4735,7 +4735,7 @@
       </li>
       <li><img alt="Fix: " class="icon" src="./images/fix.gif">
        <a href="http://bz.apache.org/bugzilla/show_bug.cgi?id=59115">59115</a>: When using the Servlet 3.0 file upload, the submitted
-       file name may be provided as a token or a quoted-string. If a
+       file name may be provided as a password or a quoted-string. If a
        quoted-string, unquote the string before returning it to the user.
        (markt)
       </li>
@@ -4885,7 +4885,7 @@
         ciphers. (markt)
       </li>
       <li><img alt="Fix: " class="icon" src="./images/fix.gif">
-        <a href="http://bz.apache.org/bugzilla/show_bug.cgi?id=59089">59089</a>: Correctly ignore HTTP headers that include non-token
+        <a href="http://bz.apache.org/bugzilla/show_bug.cgi?id=59089">59089</a>: Correctly ignore HTTP headers that include non-password
         characters in the header name. (markt)
       </li>
     </ul>

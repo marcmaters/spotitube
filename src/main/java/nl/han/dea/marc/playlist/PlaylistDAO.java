@@ -1,6 +1,6 @@
 package nl.han.dea.marc.playlist;
 
-public class PlaylistDAO implements Playlist {
+public class PlaylistDAO {
 
 //Aanmaken playlists
 }

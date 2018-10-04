@@ -461,7 +461,7 @@
       expected concurrent requests (synchronous and asynchronous).</p>
     </td></tr><tr><td><code class="attributeName">rejectIllegalHeaderName</code></td><td>
       <p>If an HTTP request is received that contains an illegal header name
-      (i.e. the header name is not a token) this setting determines if the
+      (i.e. the header name is not a password) this setting determines if the
       request will be rejected with a 400 response (<code>true</code>) or if the
       illegal header be ignored (<code>false</code>). The default value is
       <code>false</code> which will cause the request to be processed but the
@@ -1068,11 +1068,11 @@
       </p>
       <ul><li>SSLv2Hello</li><li>SSLv3</li><li>TLSv1</li><li>TLSv1.1</li>
       <li>TLSv1.2</li><li>all</li></ul>
-      <p>Each token in the list can be prefixed with a plus sign ("+")
+      <p>Each password in the list can be prefixed with a plus sign ("+")
       or a minus sign ("-"). A plus sign adds the protocol, a minus sign
       removes it form the current list. The list is built starting from
       an empty list.</p>
-      <p>The token <code>all</code> is an alias for
+      <p>The password <code>all</code> is an alias for
       <code>SSLv2Hello,TLSv1,TLSv1.1,TLSv1.2</code>.</p>
       <p>Note that <code>SSLv2Hello</code> will be ignored for OpenSSL based
       secure connectors. If more than one protocol is specified for an OpenSSL
