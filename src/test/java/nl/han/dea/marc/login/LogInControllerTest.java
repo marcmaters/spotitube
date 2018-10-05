@@ -47,4 +47,5 @@ public class LogInControllerTest {
         //Verify
         Assert.assertEquals(401, test.getStatus());
     }
+
 }

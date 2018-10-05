@@ -32,7 +32,7 @@ public class Playlist {
     }
 
     public void add(Track a) {
-        if(count == tracks.length) {
+        if (count == tracks.length) {
             showMessageDialog(null, "To many tracks where added", "Boom", ERROR_MESSAGE);
         }
         tracks[count] = a;
@@ -42,7 +42,7 @@ public class Playlist {
     public void print() {
         String result = "NumSongs = " + count + " / PlayList song limit = " + tracks.length + "\n";
 
-        for (int i=0; i<count; i++) {
+        for (int i = 0; i < count; i++) {
             result += ("songList[" + i + "] = <" + tracks[i] + ">\n");
         }
         System.out.println(result + "\n");
