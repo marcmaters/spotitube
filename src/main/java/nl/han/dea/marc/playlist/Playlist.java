@@ -5,30 +5,18 @@ import static javax.swing.JOptionPane.showMessageDialog;
 
 public class Playlist {
 
-    private String playlistname;
+    private int id;
+    private String name;
+    private boolean owner;
     private Track[] tracks;
     private int count;
 
-    public Playlist(String playlistname) {
-        this.playlistname = playlistname;
+    public Playlist(int id, String name, boolean owner, Track[] tracks) {
+        this.id = id;
+        this.name = name;
+        this.owner = owner;
         this.tracks = new Track[12];
         this.count = 0;
-    }
-
-    public String getPlaylistname() {
-        return playlistname;
-    }
-
-    public void setPlaylistname(String playlistname) {
-        this.playlistname = playlistname;
-    }
-
-    public Track[] getTracks() {
-        return tracks;
-    }
-
-    public void setTracks(Track[] tracks) {
-        this.tracks = tracks;
     }
 
     public void add(Track a) {
@@ -47,4 +35,38 @@ public class Playlist {
         }
         System.out.println(result + "\n");
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public boolean isOwner() {
+        return owner;
+    }
+
+    public void setOwner(boolean owner) {
+        this.owner = owner;
+    }
+
+    public Track[] getTracks() {
+        return tracks;
+    }
+
+    public void setTracks(Track[] tracks) {
+        this.tracks = tracks;
+    }
+
+
 }

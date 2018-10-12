@@ -21,16 +21,17 @@ public class LogInController {
     public Response login(LogInRequestDTO logInRequestDTO) {
 
         if (userService.authenticate(logInRequestDTO.getUser(), logInRequestDTO.getPassword())) {
-            LogInResponseDTO loginresponsedto = new LogInResponseDTO();
-            loginresponsedto.setUser("Marc");
-            loginresponsedto.setToken("test");
+            LogInResponseDTO logInResponseDTO = new LogInResponseDTO();
+            logInResponseDTO.setUser("Marc");
+            logInResponseDTO.setToken("test");
 
-            return Response.ok(loginresponsedto).build();
+            return Response.ok(logInResponseDTO).build();
         }
         else {
             return Response.status(401).build();
         }
     }
+
     @Inject
     public void setUserService(nl.han.dea.marc.services.UserService userService) {
         this.userService = userService;
