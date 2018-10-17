@@ -1,10 +1,10 @@
-package nl.han.dea.marc.playlist;
+package nl.han.dea.marc.playlist.dto;
 
 import java.util.List;
 import java.util.Optional;
 
 public interface Dao<T> {
-    Optional<T> get(long id);
+    T get(long id);
 
     List<T> getAll();
 

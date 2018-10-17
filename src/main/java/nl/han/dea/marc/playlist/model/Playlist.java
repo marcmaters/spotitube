@@ -1,4 +1,4 @@
-package nl.han.dea.marc.playlist;
+package nl.han.dea.marc.playlist.model;
 
 import static javax.swing.JOptionPane.ERROR_MESSAGE;
 import static javax.swing.JOptionPane.showMessageDialog;
@@ -15,7 +15,7 @@ public class Playlist {
         this.id = id;
         this.name = name;
         this.owner = owner;
-        this.tracks = new Track[12];
+        this.tracks = tracks;
         this.count = 0;
     }
 
@@ -25,15 +25,6 @@ public class Playlist {
         }
         tracks[count] = a;
         count++;
-    }
-
-    public void print() {
-        String result = "NumSongs = " + count + " / PlayList song limit = " + tracks.length + "\n";
-
-        for (int i = 0; i < count; i++) {
-            result += ("songList[" + i + "] = <" + tracks[i] + ">\n");
-        }
-        System.out.println(result + "\n");
     }
 
     public int getId() {
@@ -66,6 +57,15 @@ public class Playlist {
 
     public void setTracks(Track[] tracks) {
         this.tracks = tracks;
+    }
+
+    public void print() {
+        String result = "NumSongs = " + count + " / PlayList song limit = " + tracks.length + "\n";
+
+        for (int i = 0; i < count; i++) {
+            result += ("songList[" + i + "] = <" + tracks[i] + ">\n");
+        }
+        System.out.println(result + "\n");
     }
 
 

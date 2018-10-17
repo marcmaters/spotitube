@@ -1,4 +1,4 @@
-package nl.han.dea.marc.playlist;
+package nl.han.dea.marc.playlist.model;
 
 public class Track {
 
