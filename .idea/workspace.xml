@@ -7,19 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="699a4120-16ee-45b9-97a0-b0fdeddaf90d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/nl/han/dea/marc/model/Track.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/han/dea/marc/login/LogInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/han/dea/marc/controllers/LogInController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/han/dea/marc/login/LogInRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/han/dea/marc/dto/LogInRequestDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/han/dea/marc/login/LogInResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/han/dea/marc/dto/LogInResponseDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/han/dea/marc/playlist/TrackOrganizer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/han/dea/marc/playlist/controller/PlaylistController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/han/dea/marc/controllers/PlaylistController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/han/dea/marc/playlist/dto/Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/han/dea/marc/datasource/Dao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/han/dea/marc/playlist/dto/PlaylistsDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/han/dea/marc/dto/PlaylistsDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/han/dea/marc/playlist/dto/TracksDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/han/dea/marc/dto/TracksDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/han/dea/marc/playlist/model/Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/han/dea/marc/model/Playlist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/han/dea/marc/playlist/model/Track.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/nl/han/dea/marc/login/LogInControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/nl/han/dea/marc/login/LogInControllerTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -92,7 +80,7 @@
         <counts>
           <entry key="dummy" value="19" />
           <entry key="java" value="6489" />
-          <entry key="txt" value="372" />
+          <entry key="txt" value="436" />
           <entry key="xml" value="31" />
           <entry key="yml" value="143" />
         </counts>
@@ -100,7 +88,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="6489" />
-          <entry key="PLAIN_TEXT" value="391" />
+          <entry key="PLAIN_TEXT" value="455" />
           <entry key="XML" value="31" />
           <entry key="YAML" value="143" />
         </counts>
@@ -190,8 +178,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/nl/han/dea/marc/dto/LogInResponseDTO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="230">
+              <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -414,7 +402,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539971291095" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539971438583" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../JEE" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -425,6 +413,9 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="nl.han.dea.marc" />
+    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="nl.han.dea.marc.playlist" />
     </key>
@@ -633,7 +624,7 @@
       <workItem from="1539243523100" duration="20386000" />
       <workItem from="1539683572015" duration="3881000" />
       <workItem from="1539783610717" duration="6109000" />
-      <workItem from="1539797849472" duration="12556000" />
+      <workItem from="1539797849472" duration="12829000" />
     </task>
     <task id="LOCAL-00001" summary="Login code">
       <created>1538127676494</created>
@@ -705,7 +696,14 @@
       <option name="project" value="LOCAL" />
       <updated>1539801620129</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Tracks op de juiste manier gevuld en mappen structuur aangepast.">
+      <created>1539971348151</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1539971348151</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -741,10 +739,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89614000" />
+    <option name="totallyTimeSpent" value="89887000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25189108" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -839,7 +838,8 @@
     <MESSAGE value="&#10;travis yml toegevoegd" />
     <MESSAGE value="Aanpassingen in de DAO" />
     <MESSAGE value="Tracks gevuld." />
-    <option name="LAST_COMMIT_MESSAGE" value="Tracks gevuld." />
+    <MESSAGE value="Tracks op de juiste manier gevuld en mappen structuur aangepast." />
+    <option name="LAST_COMMIT_MESSAGE" value="Tracks op de juiste manier gevuld en mappen structuur aangepast." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/nl/han/dea/marc/primes/PrimeTester.java" />
@@ -1011,8 +1011,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/nl/han/dea/marc/dto/LogInResponseDTO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="230">
+          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
         </state>
       </provider>
     </entry>
