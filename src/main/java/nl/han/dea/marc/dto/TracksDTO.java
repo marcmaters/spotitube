@@ -1,7 +1,7 @@
-package nl.han.dea.marc.playlist.dto;
+package nl.han.dea.marc.dto;
 
-import nl.han.dea.marc.playlist.datasource.TracksDAO;
-import nl.han.dea.marc.playlist.model.Track;
+import nl.han.dea.marc.datasource.TracksDAO;
+import nl.han.dea.marc.model.Track;
 
 public class TracksDTO {
     public Track[] tracks;

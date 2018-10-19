@@ -1,4 +1,4 @@
-package nl.han.dea.marc.playlist.model;
+package nl.han.dea.marc.model;
 
 import static javax.swing.JOptionPane.ERROR_MESSAGE;
 import static javax.swing.JOptionPane.showMessageDialog;

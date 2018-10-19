@@ -1,8 +1,7 @@
-package nl.han.dea.marc.playlist.dto;
+package nl.han.dea.marc.dto;
 
-import nl.han.dea.marc.playlist.datasource.TracksDAO;
-import nl.han.dea.marc.playlist.model.Track;
-import nl.han.dea.marc.playlist.model.Playlist;
+import nl.han.dea.marc.datasource.TracksDAO;
+import nl.han.dea.marc.model.Playlist;
 
 import java.util.ArrayList;
 
@@ -13,8 +12,8 @@ public class PlaylistsDTO {
 
     public PlaylistsDTO(){
         TracksDAO tracksDAO = new TracksDAO();
-        playlists.add(new Playlist(1, "hitzone1", true, tracksDAO.getHitzone1Tracks()));
-        playlists.add(new Playlist(2, "hitzone2", true, new TracksDAO().hitzone2Tracks));
+        playlists.add(new Playlist(1, "Hitzone1", true, tracksDAO.getHitzone1Tracks()));
+        playlists.add(new Playlist(2, "Hitzone2", true, tracksDAO.getHitzone2Tracks()));
     }
 
     public ArrayList<Playlist> getPlaylists() {

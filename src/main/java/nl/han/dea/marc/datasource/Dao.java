@@ -1,7 +1,6 @@
-package nl.han.dea.marc.playlist.dto;
+package nl.han.dea.marc.datasource;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface Dao<T> {
     T get(long id);

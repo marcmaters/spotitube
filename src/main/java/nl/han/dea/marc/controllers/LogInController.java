@@ -1,5 +1,7 @@
-package nl.han.dea.marc.login;
+package nl.han.dea.marc.controllers;
 
+import nl.han.dea.marc.dto.LogInRequestDTO;
+import nl.han.dea.marc.dto.LogInResponseDTO;
 import nl.han.dea.marc.services.UserService;
 
 import javax.inject.Inject;
