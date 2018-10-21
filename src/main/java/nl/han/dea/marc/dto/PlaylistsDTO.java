@@ -11,9 +11,8 @@ public class PlaylistsDTO {
     private int length;
 
     public PlaylistsDTO(){
-        TracksDAO tracksDAO = new TracksDAO();
-        playlists.add(new Playlist(1, "Hitzone1", true, tracksDAO.getHitzone1Tracks()));
-        playlists.add(new Playlist(2, "Hitzone2", true, tracksDAO.getHitzone2Tracks()));
+        playlists.add(new Playlist(1, "Hitzone1", true, TracksDAO.HITZONE1));
+        playlists.add(new Playlist(2, "Hitzone2", true, TracksDAO.HITZONE2));
     }
 
     public ArrayList<Playlist> getPlaylists() {

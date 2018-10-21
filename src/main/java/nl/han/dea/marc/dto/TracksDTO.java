@@ -8,7 +8,9 @@ public class TracksDTO {
 
     public TracksDTO(int id){
         if(id == 1){
-            tracks = new TracksDAO().getHitzone1Tracks();
-        }//todo
+            tracks = TracksDAO.HITZONE1;
+        }else {
+            tracks = TracksDAO.HITZONE2;
+        }
     }
 }

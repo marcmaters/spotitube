@@ -7,16 +7,18 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-
 @Path("/playlists")
 public class PlaylistController {
+    private PlaylistsDTO playlistsDTO;
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response getPlaylists(@QueryParam("token") String token) {
         if (token.equals("test")) {
-            PlaylistsDTO playlistsDTO = new PlaylistsDTO();
-            playlistsDTO.setLength(4000);
+            if(playlistsDTO == null) {
+                playlistsDTO = new PlaylistsDTO();
+                playlistsDTO.setLength(4000);
+            }
             return Response.ok(playlistsDTO).build();
         }
         else {
@@ -29,13 +31,7 @@ public class PlaylistController {
     @Produces({MediaType.APPLICATION_JSON})
     @Consumes({MediaType.APPLICATION_JSON})
     public Response getTracksForPlaylist(@PathParam("id") int id) {//todo: zorgen dat de playlist wordt verwijderd zodra een andere playlist geselecteerd wordt.
-        if ("id".equals(Integer.toString(id))) {
             TracksDTO tracksDTO = new TracksDTO(id);
             return Response.ok(tracksDTO).build();
-        }
-        else {
-            TracksDTO tracksDTO = new TracksDTO(id);
-            return Response.ok(tracksDTO).build();
-        }
     }
 }
