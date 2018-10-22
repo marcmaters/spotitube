@@ -1,1 +1,12 @@
-nl\han\dea\marc\HelloWorld.class
+nl\han\dea\marc\datasource\Dao.class
+nl\han\dea\marc\dto\LogInResponseDTO.class
+nl\han\dea\marc\dto\LogInRequestDTO.class
+nl\han\dea\marc\controllers\PlaylistController.class
+nl\han\dea\marc\services\UserService.class
+nl\han\dea\marc\datasource\TracksDAO.class
+nl\han\dea\marc\model\Playlist.class
+nl\han\dea\marc\model\Track.class
+nl\han\dea\marc\config\JdbcMsSql.class
+nl\han\dea\marc\dto\TracksDTO.class
+nl\han\dea\marc\dto\PlaylistsDTO.class
+nl\han\dea\marc\controllers\LogInController.class

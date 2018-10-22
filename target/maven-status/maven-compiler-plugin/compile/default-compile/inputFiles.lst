@@ -1,1 +1,12 @@
-C:\Informatica\Jaar 4\OOSE\DEA\Spotitube\Spotitube\spotitube\src\main\java\nl\han\dea\marc\HelloWorld.java
+C:\Informatica\Jaar 4\OOSE\DEA\Spotitube\src\main\java\nl\han\dea\marc\model\Playlist.java
+C:\Informatica\Jaar 4\OOSE\DEA\Spotitube\src\main\java\nl\han\dea\marc\controllers\LogInController.java
+C:\Informatica\Jaar 4\OOSE\DEA\Spotitube\src\main\java\nl\han\dea\marc\model\Track.java
+C:\Informatica\Jaar 4\OOSE\DEA\Spotitube\src\main\java\nl\han\dea\marc\dto\PlaylistsDTO.java
+C:\Informatica\Jaar 4\OOSE\DEA\Spotitube\src\main\java\nl\han\dea\marc\dto\TracksDTO.java
+C:\Informatica\Jaar 4\OOSE\DEA\Spotitube\src\main\java\nl\han\dea\marc\services\UserService.java
+C:\Informatica\Jaar 4\OOSE\DEA\Spotitube\src\main\java\nl\han\dea\marc\dto\LogInRequestDTO.java
+C:\Informatica\Jaar 4\OOSE\DEA\Spotitube\src\main\java\nl\han\dea\marc\datasource\TracksDAO.java
+C:\Informatica\Jaar 4\OOSE\DEA\Spotitube\src\main\java\nl\han\dea\marc\config\JdbcMsSql.java
+C:\Informatica\Jaar 4\OOSE\DEA\Spotitube\src\main\java\nl\han\dea\marc\controllers\PlaylistController.java
+C:\Informatica\Jaar 4\OOSE\DEA\Spotitube\src\main\java\nl\han\dea\marc\datasource\Dao.java
+C:\Informatica\Jaar 4\OOSE\DEA\Spotitube\src\main\java\nl\han\dea\marc\dto\LogInResponseDTO.java
