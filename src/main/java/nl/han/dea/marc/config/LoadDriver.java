@@ -1,33 +1,26 @@
 package nl.han.dea.marc.config;
 
+import nl.han.dea.marc.model.Track;
+
 import java.sql.DriverManager;
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Set;
 
 public class LoadDriver {
-    public static void main(String[] argv) {
 
-        System.out.println("-------- MySQL JDBC Connection Testing ------------");
+    public static Connection CONNECTION;
 
-        System.out.println("MySQL JDBC Driver Registered!");
-        Connection connection = null;
-
+    static {
         try {
-            connection = DriverManager
-                    .getConnection("jdbc:mysql://localhost:3306/spotitube", "spotitube", "spotitube");
-
+            CONNECTION = DriverManager.getConnection
+                    ("jdbc:mysql://localhost:3306/spotitube", "spotitube", "spotitube");
         }
         catch (SQLException e) {
             System.out.println("Connection Failed! Check output console");
             e.printStackTrace();
-            return;
-        }
-
-        if (connection != null) {
-            System.out.println("You made it, take control your database now!");
-        }
-        else {
-            System.out.println("Failed to make connection!");
         }
     }
 }

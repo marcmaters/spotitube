@@ -1,5 +1,7 @@
 package nl.han.dea.marc.model;
 
+import java.util.ArrayList;
+
 import static javax.swing.JOptionPane.ERROR_MESSAGE;
 import static javax.swing.JOptionPane.showMessageDialog;
 
@@ -8,23 +10,13 @@ public class Playlist {
     private int id;
     private String name;
     private boolean owner;
-    private Track[] tracks;
-    private int count;
+    private ArrayList<Track> tracks;
 
-    public Playlist(int id, String name, boolean owner, Track[] tracks) {
+    public Playlist(int id, String name, boolean owner, ArrayList<Track> tracks) {
         this.id = id;
         this.name = name;
         this.owner = owner;
         this.tracks = tracks;
-        this.count = 0;
-    }
-
-    public void add(Track a) {
-        if (count == tracks.length) {
-            showMessageDialog(null, "To many tracks where added", "Boom", ERROR_MESSAGE);
-        }
-        tracks[count] = a;
-        count++;
     }
 
     public int getId() {
@@ -51,22 +43,12 @@ public class Playlist {
         this.owner = owner;
     }
 
-    public Track[] getTracks() {
+    public ArrayList<Track> getTracks() {
         return tracks;
     }
 
-    public void setTracks(Track[] tracks) {
+    public void setTracks(ArrayList<Track> tracks) {
         this.tracks = tracks;
     }
-
-    public void print() {
-        String result = "NumSongs = " + count + " / PlayList song limit = " + tracks.length + "\n";
-
-        for (int i = 0; i < count; i++) {
-            result += ("songList[" + i + "] = <" + tracks[i] + ">\n");
-        }
-        System.out.println(result + "\n");
-    }
-
 
 }

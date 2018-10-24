@@ -1,5 +1,7 @@
 package nl.han.dea.marc.model;
 
+import java.util.Date;
+
 public class Track {
 
     private int id;
@@ -8,11 +10,11 @@ public class Track {
     private double duration;
     private String album;
     private int playcount;
-    private int publicationDate;
+    private Date publicationDate;
     private String description;
     private boolean offlineAvailable;
 
-    public Track(int id, String title, String performer, double duration, String album, int playcount, int publicationDate, String description, boolean offlineAvailable) {
+    public Track(int id, String title, String performer, double duration, String album, int playcount, Date publicationDate, String description, boolean offlineAvailable) {
         this.id = id;
         this.title = title;
         this.performer = performer;
@@ -72,11 +74,11 @@ public class Track {
         this.playcount = playcount;
     }
 
-    public int getPublicationDate() {
+    public Date getPublicationDate() {
         return publicationDate;
     }
 
-    public void setPublicationDate(int publicationDate) {
+    public void setPublicationDate(Date publicationDate) {
         this.publicationDate = publicationDate;
     }
 

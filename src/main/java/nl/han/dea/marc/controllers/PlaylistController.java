@@ -6,7 +6,6 @@ import nl.han.dea.marc.dto.TracksDTO;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import java.sql.DriverManager;
 import java.sql.SQLException;
 
 @Path("/playlists")
@@ -15,22 +14,11 @@ public class PlaylistController {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getPlaylists(@QueryParam("token") String token) {
+    public Response getPlaylists(@QueryParam("token") String token) throws SQLException {
         if (token.equals("test")) {
             if (playlistsDTO == null) {
                 playlistsDTO = new PlaylistsDTO();
                 playlistsDTO.setLength(4000);
-//                JdbcMsSql.getDbConnection();
-                try {
-                    DriverManager.getConnection("jdbc:mysql://localhost/spotitube");
-
-                }
-                catch (SQLException ex) {
-                    // handle any errors
-                    System.out.println("SQLException: " + ex.getMessage());
-                    System.out.println("SQLState: " + ex.getSQLState());
-                    System.out.println("VendorError: " + ex.getErrorCode());
-                }
             }
             return Response.ok(playlistsDTO).build();
         }
