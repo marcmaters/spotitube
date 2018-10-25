@@ -32,7 +32,6 @@ public class PlaylistsDAO {
             ArrayList<Track> tracksInPlaylist = new ArrayList<>();
             ResultSet rsTracksInPlaylist = connection.createStatement().executeQuery("select * from spotitube.track where track_id in (select track_id from spotitube.tracksinplaylist where playlist_id = " + rsPlaylist.getInt(1) + ")");
             try {
-
                 while (rsTracksInPlaylist.next()) {
                     Track track = new Track(
                             rsTracksInPlaylist.getInt(1),
@@ -50,7 +49,6 @@ public class PlaylistsDAO {
             finally {
                 rsTracksInPlaylist.close();
             }
-
             Playlist playlist = new Playlist(
                     rsPlaylist.getInt(1),
                     rsPlaylist.getString(2),
@@ -60,5 +58,4 @@ public class PlaylistsDAO {
             playlists.add(playlist);
         }
     }
-
 }
