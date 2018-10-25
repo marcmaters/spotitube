@@ -35,4 +35,14 @@ public class PlaylistController {
         TracksDTO tracksDTO = new TracksDTO(id);
         return Response.ok(tracksDTO).build();
     }
+
+//    @PUT
+//    @Path("{id}/playlists")
+//    @Produces({MediaType.APPLICATION_JSON})
+//    @Consumes({MediaType.APPLICATION_JSON})
+//    public Response editPlaylist(@QueryParam("token") String token, @PathParam("id") int id) throws SQLException{
+//        if(token.equals("test")) {
+//
+//        }
+//    }
 }

@@ -5,6 +5,7 @@ import nl.han.dea.marc.model.Playlist;
 import nl.han.dea.marc.model.Track;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -18,6 +19,8 @@ public class PlaylistsDAO {
     }
 
     ArrayList<Playlist> playlists;
+//    String statement = "SELECT `guid`, `grade`, `studentID`, `name` FROM `students` where `guid`=?";
+//    PreparedStatement dbStatement = connection.prepareStatement(statement);
 
     public PlaylistsDAO() throws SQLException {
         connection = JDBCConnector.CONNECTION;
@@ -60,4 +63,11 @@ public class PlaylistsDAO {
             }
         }
     }
+//
+//    private void updatePlaylistInDb(int id) throws SQLException {
+//        String statement = "update spotitube.playlist set name =? where playlist_id =?";
+//        PreparedStatement dbStatement = connection.prepareStatement(statement);
+//        dbStatement.setInt(1, playlists.get(id));
+//        }
+
 }
