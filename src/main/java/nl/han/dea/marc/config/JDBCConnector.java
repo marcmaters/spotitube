@@ -21,6 +21,7 @@ public class JDBCConnector {
             String url = (String) p.get("url");
             String username = (String) p.get("username");
             String password = (String) p.get("password");
+
             Class.forName(drivername);
             CONNECTION = DriverManager.getConnection(url, username, password);
         }
