@@ -1,6 +1,6 @@
 package nl.han.dea.marc.datasource;
 
-import nl.han.dea.marc.config.LoadDriver;
+import nl.han.dea.marc.config.JDBCConnector;
 import nl.han.dea.marc.model.Playlist;
 import nl.han.dea.marc.model.Track;
 
@@ -20,7 +20,7 @@ public class PlaylistsDAO {
     ArrayList<Playlist> playlists;
 
     public PlaylistsDAO() throws SQLException {
-        connection = LoadDriver.CONNECTION;
+        connection = JDBCConnector.CONNECTION;
         playlists = new ArrayList<>();
         receiveAllPlaylistsFromDb();
     }
