@@ -40,7 +40,7 @@ public class PlaylistsDAO {
                         rsTracksInPlaylist.getDouble(4),
                         rsTracksInPlaylist.getString(5),
                         rsTracksInPlaylist.getInt(6),
-                        rsTracksInPlaylist.getDate(7),
+                        rsTracksInPlaylist.getString(7),
                         rsTracksInPlaylist.getString(8),
                         rsTracksInPlaylist.getBoolean(9));
                 tracksInPlaylist.add(track);

@@ -62,9 +62,16 @@
                         </goals>
                     </execution>
                 </executions>
-
             </plugin>
         </plugins>
+        <!--<resources>-->
+            <!--<resource id="MySQL Database" type="DataSource">-->
+                <!--JdbcDriver  com.mysql.jdbc.Driver-->
+                <!--JdbcUrl jdbc:mysql://localhost:3306/spotitube-->
+                <!--UserName    spotitube-->
+                <!--Password    spotitube-->
+            <!--</resource>-->
+        <!--</resources>-->
     </build>
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>

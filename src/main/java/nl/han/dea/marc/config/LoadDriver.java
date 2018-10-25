@@ -15,11 +15,15 @@ public class LoadDriver {
 
     static {
         try {
+            Class.forName("com.mysql.jdbc.Driver");
             CONNECTION = DriverManager.getConnection
                     ("jdbc:mysql://localhost:3306/spotitube", "spotitube", "spotitube");
         }
         catch (SQLException e) {
             System.out.println("Connection Failed! Check output console");
+            e.printStackTrace();
+        }
+        catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
     }

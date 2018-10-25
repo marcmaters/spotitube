@@ -30,7 +30,7 @@ public class TracksDAO {
                     rs.getDouble(4),
                     rs.getString(5),
                     rs.getInt(6),
-                    rs.getDate(7),
+                    rs.getString(7),
                     rs.getString(8),
                     rs.getBoolean(9));
             tracks.add(track);

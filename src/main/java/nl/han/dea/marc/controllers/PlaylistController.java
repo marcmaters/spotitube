@@ -31,7 +31,7 @@ public class PlaylistController {
     @Path("{id}/tracks")
     @Produces({MediaType.APPLICATION_JSON})
     @Consumes({MediaType.APPLICATION_JSON})
-    public Response getTracksForPlaylist(@PathParam("id") int id) {//todo: zorgen dat de playlist wordt verwijderd zodra een andere playlist geselecteerd wordt.
+    public Response getTracksForPlaylist(@PathParam("id") int id) throws SQLException {//todo: zorgen dat de playlist wordt verwijderd zodra een andere playlist geselecteerd wordt.
         TracksDTO tracksDTO = new TracksDTO(id);
         return Response.ok(tracksDTO).build();
     }
