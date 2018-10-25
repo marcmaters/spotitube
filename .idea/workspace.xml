@@ -9,7 +9,6 @@
     <list default="true" id="699a4120-16ee-45b9-97a0-b0fdeddaf90d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nl/han/dea/marc/datasource/PlaylistsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/han/dea/marc/datasource/PlaylistsDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/spotitube.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/spotitube.war" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -104,7 +103,7 @@
           <entry key="dummy" value="20" />
           <entry key="java" value="8498" />
           <entry key="properties" value="35" />
-          <entry key="txt" value="586" />
+          <entry key="txt" value="590" />
           <entry key="xml" value="76" />
           <entry key="yml" value="143" />
         </counts>
@@ -112,7 +111,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="8498" />
-          <entry key="PLAIN_TEXT" value="606" />
+          <entry key="PLAIN_TEXT" value="610" />
           <entry key="Properties" value="35" />
           <entry key="XML" value="76" />
           <entry key="YAML" value="143" />
@@ -206,8 +205,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/nl/han/dea/marc/datasource/PlaylistsDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-401">
-              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+            <state relative-caret-position="160">
+              <caret line="32" column="48" selection-start-line="32" selection-start-column="48" selection-end-line="32" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#372#373#0" expanded="true" />
@@ -409,7 +408,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540462526086" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540462756604" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/target/spotitube.war!/WEB-INF/classes/mysql-connector-java-8.0.13" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -654,7 +653,7 @@
       <workItem from="1540303159339" duration="1058000" />
       <workItem from="1540318275087" duration="46000" />
       <workItem from="1540318456733" duration="99000" />
-      <workItem from="1540376863847" duration="23225000" />
+      <workItem from="1540376863847" duration="23548000" />
     </task>
     <task id="LOCAL-00001" summary="Login code">
       <created>1538127676494</created>
@@ -803,7 +802,14 @@
       <option name="project" value="LOCAL" />
       <updated>1540461868996</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="refactor Playlist DAO 2.0">
+      <created>1540462553409</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1540462553409</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -839,7 +845,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="134633000" />
+    <option name="totallyTimeSpent" value="134956000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -944,7 +950,8 @@
     <MESSAGE value="Data wordt uit MySQL gehaald" />
     <MESSAGE value="Data wordt uit MySQL gehaald en door client geladen" />
     <MESSAGE value="refactor Playlist DAO" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor Playlist DAO" />
+    <MESSAGE value="refactor Playlist DAO 2.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor Playlist DAO 2.0" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/nl/han/dea/marc/primes/PrimeTester.java" />
@@ -1156,8 +1163,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/nl/han/dea/marc/datasource/PlaylistsDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-401">
-          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+        <state relative-caret-position="160">
+          <caret line="32" column="48" selection-start-line="32" selection-start-column="48" selection-end-line="32" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#372#373#0" expanded="true" />
