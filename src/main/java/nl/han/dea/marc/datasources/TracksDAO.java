@@ -16,10 +16,10 @@ public class TracksDAO {
     public TracksDAO() throws SQLException {
         connection = JDBCConnector.CONNECTION;
         tracks = new ArrayList<>();
-        receiveAllTracksFromDb();
+        getAllTracksFromDb();
     }
 
-    private void receiveAllTracksFromDb() throws SQLException {
+    private void getAllTracksFromDb() throws SQLException {
         ResultSet rs = connection.createStatement().executeQuery("select * from track");
 
         while (rs.next()) {

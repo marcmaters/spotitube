@@ -5,15 +5,15 @@ import java.util.List;
 
 public class PlaylistsDTO {
 
-    public void setPlaylists(List<PlaylistDTO> playlists) {
-        this.playlists = playlists;
-    }
-
     List<PlaylistDTO> playlists = new ArrayList<>();
     private int length;
 
     public List<PlaylistDTO> getPlaylists() {
         return playlists;
+    }
+
+    public void setPlaylists(List<PlaylistDTO> playlists) {
+        this.playlists = playlists;
     }
 
     public int getLength() {

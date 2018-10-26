@@ -2,8 +2,6 @@ package nl.han.dea.marc.dtos;
 
 import java.util.ArrayList;
 
-import static javax.swing.JOptionPane.showMessageDialog;
-
 public class PlaylistDTO {
 
     private int id;

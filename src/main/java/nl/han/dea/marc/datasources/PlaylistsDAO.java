@@ -12,7 +12,7 @@ import java.util.List;
 
 public class PlaylistsDAO {
 
-    Connection connection;
+    private Connection connection;
 
     public PlaylistsDAO() {
         connection = JDBCConnector.CONNECTION;
@@ -20,7 +20,6 @@ public class PlaylistsDAO {
 
     public List<PlaylistDTO> getPlaylists() {
         try (ResultSet rsPlaylist = connection.createStatement().executeQuery("select * from spotitube.playlist")) {
-
             while (rsPlaylist.next()) {
                 ArrayList<TrackDTO> tracksInPlaylist = new ArrayList<>();
                 try (ResultSet rsTracksInPlaylist = connection.createStatement().executeQuery("select * from spotitube.track where track_id in (select track_id from spotitube.tracksinplaylist where playlist_id = " + rsPlaylist.getInt(1) + ")")) {
@@ -53,12 +52,20 @@ public class PlaylistsDAO {
                 playlists.add(playlist);
                 return playlists;
             }
+
         }
         catch (SQLException e) {
             e.printStackTrace();
             return new ArrayList<>();
-        } return new ArrayList<>();
+        }
+        return new ArrayList<>();
     }
+
+    public double getLenghtFromPlaylists() {
+        try (ResultSet rsPlaylist = connection.createStatement().executeQuery("select sum(duration) from spotitube.track")) {
+
+}
+
 
 //
 //    private void updatePlaylistInDb(int id) throws SQLException {
@@ -67,4 +74,4 @@ public class PlaylistsDAO {
 //        dbStatement.setInt(1, playlists.get(id));
 //        }
 
-}
+
