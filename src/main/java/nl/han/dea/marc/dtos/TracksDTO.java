@@ -1,6 +1,5 @@
 package nl.han.dea.marc.dtos;
 
-import nl.han.dea.marc.datasources.PlaylistsDAO;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,7 +15,4 @@ public class TracksDTO {
         return tracks;
     }
 
-//    public TracksDTO(int id) {
-//        tracks = new PlaylistsDAO().getPlaylists().get(id - 1).getTracks();
-//    }
 }

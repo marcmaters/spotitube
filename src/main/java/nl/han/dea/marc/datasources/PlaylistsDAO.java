@@ -5,6 +5,7 @@ import nl.han.dea.marc.dtos.PlaylistDTO;
 import nl.han.dea.marc.dtos.TrackDTO;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -29,7 +30,7 @@ public class PlaylistsDAO {
                                     rsTracksInPlaylist.getInt(1),
                                     rsTracksInPlaylist.getString(2),
                                     rsTracksInPlaylist.getString(3),
-                                    rsTracksInPlaylist.getDouble(4),
+                                    rsTracksInPlaylist.getInt(4),
                                     rsTracksInPlaylist.getString(5),
                                     rsTracksInPlaylist.getInt(6),
                                     rsTracksInPlaylist.getString(7),
@@ -56,22 +57,41 @@ public class PlaylistsDAO {
         }
         catch (SQLException e) {
             e.printStackTrace();
-            return new ArrayList<>();
         }
-        return new ArrayList<>();
+        return new ArrayList<>();//todo refactor
     }
 
-    public double getLenghtFromPlaylists() {
-        try (ResultSet rsPlaylist = connection.createStatement().executeQuery("select sum(duration) from spotitube.track")) {
+
+    public int getLengthFromPlaylists() {
+        int totalLength;
+        try (ResultSet rsPlaylist = connection.createStatement().executeQuery("select * from spotitube.playlist")) {
+            try (ResultSet rsLength = connection.createStatement().executeQuery("select sum(duration) from spotitube.track where track_id in (select track_id from spotitube.tracksinplaylist where playlist_id = " + rsPlaylist.getInt(1) + ")")) {
+                rsLength.next();
+                totalLength = rsLength.getInt(1);
+                return totalLength;
+            }
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return 1;//todo refactor
+    }
+
+
+//    public void updatePlaylistInDb(String newName) {
+//        try (PreparedStatement ps = connection.prepareStatement("update spotitube.playlist set name =? where playlist_id =" + rsPlaylist.getInt(1))) {
+//            ps.setString(1, newName);
+//            ps.executeUpdate();
+//            ps.close();
+//        }
+//        catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//    }
 
 }
 
 
-//
-//    private void updatePlaylistInDb(int id) throws SQLException {
-//        String statement = "update spotitube.playlist set name =? where playlist_id =?";
-//        PreparedStatement dbStatement = connection.prepareStatement(statement);
-//        dbStatement.setInt(1, playlists.get(id));
-//        }
+
 
 

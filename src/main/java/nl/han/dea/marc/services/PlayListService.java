@@ -15,9 +15,13 @@ public class PlayListService {
         List<PlaylistDTO> playlists = playlistsDAO.getPlaylists();
         PlaylistsDTO playlistsDTO = new PlaylistsDTO();
         playlistsDTO.setPlaylists(playlists);
-        playlistsDTO.setLength(4000);
+        playlistsDTO.setLength(playlistsDAO.getLengthFromPlaylists());
         return playlistsDTO;
     }
+
+//    public void setPlaylistName(String newName) {
+//        PlaylistDTO playlistDTO = new PlaylistDTO();
+//    }
 
     @Inject
     public void setPlaylistsDAO(PlaylistsDAO playlistsDAO) {this.playlistsDAO = playlistsDAO;}
