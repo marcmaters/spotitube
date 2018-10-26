@@ -1,7 +1,7 @@
 package nl.han.dea.marc.controllers;
 
-import nl.han.dea.marc.dto.LogInRequestDTO;
-import nl.han.dea.marc.dto.LogInResponseDTO;
+import nl.han.dea.marc.dtos.LogInRequestDTO;
+import nl.han.dea.marc.dtos.LogInResponseDTO;
 import nl.han.dea.marc.services.UserService;
 
 import javax.inject.Inject;
@@ -35,7 +35,7 @@ public class LogInController {
     }
 
     @Inject
-    public void setUserService(nl.han.dea.marc.services.UserService userService) {
+    public void setUserService(UserService userService) {
         this.userService = userService;
     }
 }

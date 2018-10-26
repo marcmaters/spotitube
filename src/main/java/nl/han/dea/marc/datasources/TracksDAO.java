@@ -1,7 +1,7 @@
-package nl.han.dea.marc.datasource;
+package nl.han.dea.marc.datasources;
 
 import nl.han.dea.marc.config.JDBCConnector;
-import nl.han.dea.marc.model.Track;
+import nl.han.dea.marc.dtos.TrackDTO;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -11,7 +11,7 @@ import java.util.ArrayList;
 public class TracksDAO {
 
     Connection connection;
-    ArrayList<Track> tracks;
+    ArrayList<TrackDTO> tracks;
 
     public TracksDAO() throws SQLException {
         connection = JDBCConnector.CONNECTION;
@@ -23,7 +23,7 @@ public class TracksDAO {
         ResultSet rs = connection.createStatement().executeQuery("select * from track");
 
         while (rs.next()) {
-            Track track = new Track(
+            TrackDTO track = new TrackDTO(
                     rs.getInt(1),
                     rs.getString(2),
                     rs.getString(3),

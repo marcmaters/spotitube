@@ -1,42 +1,32 @@
-package nl.han.dea.marc.datasource;
+package nl.han.dea.marc.datasources;
 
 import nl.han.dea.marc.config.JDBCConnector;
-import nl.han.dea.marc.model.Playlist;
-import nl.han.dea.marc.model.Track;
+import nl.han.dea.marc.dtos.PlaylistDTO;
+import nl.han.dea.marc.dtos.TrackDTO;
 
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class PlaylistsDAO {
 
     Connection connection;
 
-    public ArrayList<Playlist> getPlaylists() {
-        return playlists;
-    }
-
-    ArrayList<Playlist> playlists;
-//    String statement = "SELECT `guid`, `grade`, `studentID`, `name` FROM `students` where `guid`=?";
-//    PreparedStatement dbStatement = connection.prepareStatement(statement);
-
-    public PlaylistsDAO() throws SQLException {
+    public PlaylistsDAO() {
         connection = JDBCConnector.CONNECTION;
-        playlists = new ArrayList<>();
-        receiveAllPlaylistsFromDb();
     }
 
-    private void receiveAllPlaylistsFromDb() throws SQLException {
-        try (ResultSet rsPlaylist = connection.createStatement().executeQuery("select * from PLAYLIST")) {
+    public List<PlaylistDTO> getPlaylists() {
+        try (ResultSet rsPlaylist = connection.createStatement().executeQuery("select * from spotitube.playlist")) {
 
             while (rsPlaylist.next()) {
-                ArrayList<Track> tracksInPlaylist = new ArrayList<>();
+                ArrayList<TrackDTO> tracksInPlaylist = new ArrayList<>();
                 try (ResultSet rsTracksInPlaylist = connection.createStatement().executeQuery("select * from spotitube.track where track_id in (select track_id from spotitube.tracksinplaylist where playlist_id = " + rsPlaylist.getInt(1) + ")")) {
                     try {
                         while (rsTracksInPlaylist.next()) {
-                            Track track = new Track(
+                            TrackDTO track = new TrackDTO(
                                     rsTracksInPlaylist.getInt(1),
                                     rsTracksInPlaylist.getString(2),
                                     rsTracksInPlaylist.getString(3),
@@ -53,16 +43,23 @@ public class PlaylistsDAO {
                         rsTracksInPlaylist.close();
                     }
                 }
-                Playlist playlist = new Playlist(
+                PlaylistDTO playlist = new PlaylistDTO(
                         rsPlaylist.getInt(1),
                         rsPlaylist.getString(2),
                         rsPlaylist.getBoolean(3),
                         tracksInPlaylist
                 );
+                ArrayList<PlaylistDTO> playlists = new ArrayList<>();
                 playlists.add(playlist);
+                return playlists;
             }
         }
+        catch (SQLException e) {
+            e.printStackTrace();
+            return new ArrayList<>();
+        } return new ArrayList<>();
     }
+
 //
 //    private void updatePlaylistInDb(int id) throws SQLException {
 //        String statement = "update spotitube.playlist set name =? where playlist_id =?";

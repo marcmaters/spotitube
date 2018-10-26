@@ -1,18 +1,17 @@
-package nl.han.dea.marc.model;
+package nl.han.dea.marc.dtos;
 
 import java.util.ArrayList;
 
-import static javax.swing.JOptionPane.ERROR_MESSAGE;
 import static javax.swing.JOptionPane.showMessageDialog;
 
-public class Playlist {
+public class PlaylistDTO {
 
     private int id;
     private String name;
     private boolean owner;
-    private ArrayList<Track> tracks;
+    private ArrayList<TrackDTO> tracks;
 
-    public Playlist(int id, String name, boolean owner, ArrayList<Track> tracks) {
+    public PlaylistDTO(int id, String name, boolean owner, ArrayList<TrackDTO> tracks) {
         this.id = id;
         this.name = name;
         this.owner = owner;
@@ -43,11 +42,11 @@ public class Playlist {
         this.owner = owner;
     }
 
-    public ArrayList<Track> getTracks() {
+    public ArrayList<TrackDTO> getTracks() {
         return tracks;
     }
 
-    public void setTracks(ArrayList<Track> tracks) {
+    public void setTracks(ArrayList<TrackDTO> tracks) {
         this.tracks = tracks;
     }
 

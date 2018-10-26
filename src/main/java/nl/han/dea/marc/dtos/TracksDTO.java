@@ -1,13 +1,12 @@
-package nl.han.dea.marc.dto;
+package nl.han.dea.marc.dtos;
 
-import nl.han.dea.marc.datasource.PlaylistsDAO;
-import nl.han.dea.marc.model.Track;
+import nl.han.dea.marc.datasources.PlaylistsDAO;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class TracksDTO {
-    public ArrayList<Track> tracks;
+    public ArrayList<TrackDTO> tracks;
 
     public TracksDTO(int id) throws SQLException {
         if(id == 1){

@@ -1,4 +1,4 @@
-package nl.han.dea.marc.dto;
+package nl.han.dea.marc.dtos;
 
 public class LogInRequestDTO {
     private String user;

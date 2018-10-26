@@ -1,7 +1,7 @@
 package nl.han.dea.marc.login;
 
 import nl.han.dea.marc.controllers.LogInController;
-import nl.han.dea.marc.dto.LogInRequestDTO;
+import nl.han.dea.marc.dtos.LogInRequestDTO;
 import nl.han.dea.marc.services.UserService;
 import org.junit.Assert;
 import org.junit.Test;

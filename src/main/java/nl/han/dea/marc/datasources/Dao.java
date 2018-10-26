@@ -1,4 +1,4 @@
-package nl.han.dea.marc.datasource;
+package nl.han.dea.marc.datasources;
 
 import java.util.List;
 

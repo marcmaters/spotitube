@@ -1,8 +1,7 @@
-package nl.han.dea.marc.model;
+package nl.han.dea.marc.dtos;
 
-import java.util.Date;
 
-public class Track {
+public class TrackDTO {
 
     private int id;
     private String title;
@@ -14,7 +13,7 @@ public class Track {
     private String description;
     private boolean offlineAvailable;
 
-    public Track(int id, String title, String performer, double duration, String album, int playcount, String publicationDate, String description, boolean offlineAvailable) {
+    public TrackDTO(int id, String title, String performer, double duration, String album, int playcount, String publicationDate, String description, boolean offlineAvailable) {
         this.id = id;
         this.title = title;
         this.performer = performer;
