@@ -5,7 +5,6 @@ import nl.han.dea.marc.dtos.PlaylistDTO;
 import nl.han.dea.marc.dtos.TrackDTO;
 
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -21,74 +20,81 @@ public class PlaylistsDAO {
 
     public List<PlaylistDTO> getPlaylists() {
         try (ResultSet rsPlaylist = connection.createStatement().executeQuery("select * from spotitube.playlist")) {
+            ArrayList<PlaylistDTO> playlists = new ArrayList<>();
             while (rsPlaylist.next()) {
-                ArrayList<TrackDTO> tracksInPlaylist = new ArrayList<>();
-                try (ResultSet rsTracksInPlaylist = connection.createStatement().executeQuery("select * from spotitube.track where track_id in (select track_id from spotitube.tracksinplaylist where playlist_id = " + rsPlaylist.getInt(1) + ")")) {
-                    try {
-                        while (rsTracksInPlaylist.next()) {
-                            TrackDTO track = new TrackDTO(
-                                    rsTracksInPlaylist.getInt(1),
-                                    rsTracksInPlaylist.getString(2),
-                                    rsTracksInPlaylist.getString(3),
-                                    rsTracksInPlaylist.getInt(4),
-                                    rsTracksInPlaylist.getString(5),
-                                    rsTracksInPlaylist.getInt(6),
-                                    rsTracksInPlaylist.getString(7),
-                                    rsTracksInPlaylist.getString(8),
-                                    rsTracksInPlaylist.getBoolean(9));
-                            tracksInPlaylist.add(track);
-                        }
-                    }
-                    finally {
-                        rsTracksInPlaylist.close();
-                    }
-                }
-                PlaylistDTO playlist = new PlaylistDTO(
-                        rsPlaylist.getInt(1),
-                        rsPlaylist.getString(2),
-                        rsPlaylist.getBoolean(3),
-                        tracksInPlaylist
-                );
-                ArrayList<PlaylistDTO> playlists = new ArrayList<>();
+                PlaylistDTO playlist = new PlaylistDTO();
+                playlist.setId( rsPlaylist.getInt(1));
+                playlist.setName(rsPlaylist.getString(2));
+                playlist.setOwner(rsPlaylist.getBoolean(3));
                 playlists.add(playlist);
-                return playlists;
             }
-
-        }
-        catch (SQLException e) {
+            return playlists;
+        } catch (SQLException e) {
             e.printStackTrace();
+            return null;
         }
-        return new ArrayList<>();//todo refactor
     }
-
 
     public int getLengthFromPlaylists() {
-        int totalLength;
+        int totalLength = 0;
         try (ResultSet rsPlaylist = connection.createStatement().executeQuery("select * from spotitube.playlist")) {
-            try (ResultSet rsLength = connection.createStatement().executeQuery("select sum(duration) from spotitube.track where track_id in (select track_id from spotitube.tracksinplaylist where playlist_id = " + rsPlaylist.getInt(1) + ")")) {
-                rsLength.next();
-                totalLength = rsLength.getInt(1);
-                return totalLength;
+            while (rsPlaylist.next()) {
+                String sumQuery = "select sum(duration) from spotitube.track where track_id in (select track_id from spotitube.tracksinplaylist where playlist_id = " + rsPlaylist.getInt(1) + ")";
+                try (ResultSet rsLength = connection.createStatement().executeQuery(sumQuery)) {
+                    while(rsLength.next()){
+                        totalLength += rsLength.getInt(1);
+                    }
+                }
             }
+            return totalLength;
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+            return 0; //todo refactor
+        }
+    }
+
+    public void updatePlaylists(int playlistId, String newPlaylistName) {
+        try {
+            String update = "UPDATE spotitube.playlist SET name = '"+newPlaylistName+"' WHERE playlist_id = "+playlistId+";";
+            connection.createStatement().executeUpdate(update);
         }
         catch (SQLException e) {
             e.printStackTrace();
         }
-        return 1;//todo refactor
     }
 
+    public void setPlaylist (String playlistName) {
+        String add = "INSERT INTO spotitube.playlist (name, owner) VALUES ('"+playlistName+"', true)";
+        try {
+            connection.createStatement().executeUpdate(add);
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
-//    public void updatePlaylistInDb(String newName) {
-//        try (PreparedStatement ps = connection.prepareStatement("update spotitube.playlist set name =? where playlist_id =" + rsPlaylist.getInt(1))) {
-//            ps.setString(1, newName);
-//            ps.executeUpdate();
-//            ps.close();
-//        }
-//        catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//    }
+    public void deletePlaylists(int playListId) {
+        String delete = "DELETE FROM spotitube.playlist WHERE playlist_id = "+playListId+";";
+        try {
+            connection.createStatement().executeUpdate(delete);
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
+    public void addTrackToPlaylist(int playlistId, TrackDTO track) {
+        String add = "INSERT INTO spotitube.tracksinplaylist (playlist_id, track_id) VALUES ("+playlistId+", "+track.getId()+")";
+        String  update= "UPDATE spotitube.track SET offline_available = "+track.isOfflineAvailable()+" WHERE track_id = "+track.getId()+";";
+        try {
+            connection.createStatement().executeUpdate(add);
+            connection.createStatement().executeUpdate(update);
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }
 
 

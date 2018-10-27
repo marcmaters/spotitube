@@ -1,20 +1,14 @@
 package nl.han.dea.marc.dtos;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class PlaylistDTO {
 
     private int id;
     private String name;
     private boolean owner;
-    private ArrayList<TrackDTO> tracks;
-
-    public PlaylistDTO(int id, String name, boolean owner, ArrayList<TrackDTO> tracks) {
-        this.id = id;
-        this.name = name;
-        this.owner = owner;
-        this.tracks = tracks;
-    }
+    private List<TrackDTO> tracks;
 
     public int getId() {
         return id;
@@ -40,11 +34,11 @@ public class PlaylistDTO {
         this.owner = owner;
     }
 
-    public ArrayList<TrackDTO> getTracks() {
+    public List<TrackDTO> getTracks() {
         return tracks;
     }
 
-    public void setTracks(ArrayList<TrackDTO> tracks) {
+    public void setTracks(List<TrackDTO> tracks) {
         this.tracks = tracks;
     }
 
