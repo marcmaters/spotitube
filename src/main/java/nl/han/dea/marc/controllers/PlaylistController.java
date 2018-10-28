@@ -123,7 +123,6 @@ public class PlaylistController {
         }
     }
 
-
     @Inject
     public void setPlayListService(PlayListService playListService) {
         this.playListService = playListService;

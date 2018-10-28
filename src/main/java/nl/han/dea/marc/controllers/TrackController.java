@@ -1,9 +1,6 @@
 package nl.han.dea.marc.controllers;
 
-import nl.han.dea.marc.datasources.TracksDAO;
-import nl.han.dea.marc.dtos.PlaylistsDTO;
 import nl.han.dea.marc.dtos.TracksDTO;
-import nl.han.dea.marc.services.PlayListService;
 import nl.han.dea.marc.services.TrackService;
 
 import javax.inject.Inject;
@@ -38,7 +35,7 @@ public class TrackController {
     }
 
     @Inject
-    public void setPlayListService(TrackService trackService) {
+    public void setTrackService(TrackService trackService) {
         this.trackService = trackService;
     }
 

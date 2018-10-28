@@ -5,10 +5,7 @@ import nl.han.dea.marc.dtos.LogInResponseDTO;
 import nl.han.dea.marc.services.UserService;
 
 import javax.inject.Inject;
-import javax.ws.rs.Consumes;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
@@ -24,8 +21,8 @@ public class LogInController {
 
         if (userService.authenticate(logInRequestDTO.getUser(), logInRequestDTO.getPassword())) {
             LogInResponseDTO logInResponseDTO = new LogInResponseDTO();
-            logInResponseDTO.setUser("Marc");
-            logInResponseDTO.setToken("test");
+            logInResponseDTO.setUser(logInRequestDTO.getUser());
+            logInResponseDTO.setToken(userService.getToken());
 
             return Response.ok(logInResponseDTO).build();
         }
@@ -39,3 +36,6 @@ public class LogInController {
         this.userService = userService;
     }
 }
+
+//                logInResponseDTO.setUser(userService.getUser(logInRequestDTO.getUser()));
+//                logInResponseDTO.getToken();

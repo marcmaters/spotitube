@@ -31,9 +31,6 @@ public class PlayListService {
         playlistsDAO.deletePlaylists(playListId);
     }
 
-    @Inject
-    public void setPlaylistsDAO(PlaylistsDAO playlistsDAO) {this.playlistsDAO = playlistsDAO;}
-
     public void addTrackToPlaylist(int playlistId, TrackDTO selectedTrack, TrackService tracksService) throws SQLException {
         TracksDTO tracksDTO = tracksService.getTracks(playlistId);
         boolean alreadyExists = false;
@@ -47,6 +44,10 @@ public class PlayListService {
             playlistsDAO.addTrackToPlaylist(playlistId, selectedTrack);
         }
     }
+
+    @Inject
+    public void setPlaylistsDAO(PlaylistsDAO playlistsDAO) {this.playlistsDAO = playlistsDAO;}
+
 }
 
 //public return playlistsDTO
