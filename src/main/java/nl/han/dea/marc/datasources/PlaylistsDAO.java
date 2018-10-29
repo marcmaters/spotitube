@@ -62,6 +62,14 @@ public class PlaylistsDAO {
         catch (SQLException e) {
             e.printStackTrace();
         }
+        finally {
+            try {
+                connection.close();  // Multiple streams were opened. Only the last is closed.
+            }
+            catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     public void setPlaylist (String playlistName, String token) {
