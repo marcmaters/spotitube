@@ -55,25 +55,9 @@ public class PlaylistsDAO {
         }
     }
 
-    public void updatePlaylists(int playlistId, String newPlaylistName) {
-
-        try {
+    public void updatePlaylists(int playlistId, String newPlaylistName) throws SQLException {
             String update = "UPDATE spotitube.playlist SET name = '" + newPlaylistName + "' WHERE playlist_id = " + playlistId + ";";
-            try {
                 connection.createStatement().executeUpdate(update);
-            }
-            catch (SQLException e) {
-                e.printStackTrace();
-            }
-        } finally {
-            try {
-                connection.close();
-            }
-            catch (SQLException e) {
-                e.printStackTrace();
-            }
-        }
-
     }
 
     public void setPlaylist(String playlistName, String token) {

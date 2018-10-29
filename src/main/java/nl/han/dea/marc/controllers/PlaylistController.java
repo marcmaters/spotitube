@@ -75,7 +75,6 @@ public class PlaylistController {
     @Path("{id}")
     @Consumes({MediaType.APPLICATION_JSON})
     public Response editPlaylist(String body, @QueryParam("token") String token, @PathParam("id") int id) {
-
         ObjectMapper mapper = new ObjectMapper();
         String newPlaylistName = null;
         try {
