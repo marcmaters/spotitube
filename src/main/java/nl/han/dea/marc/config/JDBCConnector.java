@@ -9,7 +9,11 @@ import java.util.Properties;
 
 public class JDBCConnector {
 
-    public static Connection CONNECTION;
+    private JDBCConnector() {
+        throw new IllegalStateException("JDBC Connector class");
+    }
+
+    public static Connection connection;
     static {
         try {
             Properties p = new Properties();
@@ -23,7 +27,7 @@ public class JDBCConnector {
             String password = (String) p.get("password");
 
             Class.forName(drivername);
-            CONNECTION = DriverManager.getConnection(url, username, password);
+            connection = DriverManager.getConnection(url, username, password);
         }
         catch (SQLException | ClassNotFoundException | IOException e) {
             e.printStackTrace();

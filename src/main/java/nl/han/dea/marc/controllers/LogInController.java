@@ -36,6 +36,3 @@ public class LogInController {
         this.userService = userService;
     }
 }
-
-//                logInResponseDTO.setUser(userService.getUser(logInRequestDTO.getUser()));
-//                logInResponseDTO.getToken();

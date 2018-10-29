@@ -9,7 +9,7 @@ import java.sql.SQLException;
 public class UserDAO {
     Connection connection;
 
-    public UserDAO() {connection = JDBCConnector.CONNECTION;}
+    public UserDAO() {connection = JDBCConnector.connection;}
 
     public String getUser(String user) throws SQLException {
         String getUser;

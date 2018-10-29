@@ -8,6 +8,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class PlaylistsDAO {
@@ -15,7 +16,7 @@ public class PlaylistsDAO {
     private Connection connection;
 
     public PlaylistsDAO() {
-        connection = JDBCConnector.CONNECTION;
+        connection = JDBCConnector.connection;
     }
 
     public List<PlaylistDTO> getPlaylists(String token) {
@@ -32,7 +33,7 @@ public class PlaylistsDAO {
         }
         catch (SQLException e) {
             e.printStackTrace();
-            return null;
+            return Collections.emptyList();
         }
     }
 
@@ -51,18 +52,23 @@ public class PlaylistsDAO {
         }
         catch (SQLException e) {
             e.printStackTrace();
-            return 0; //todo refactor
+            return 0;
         }
     }
 
-    public void updatePlaylists(int playlistId, String newPlaylistName) throws SQLException {
+    public void updatePlaylists(int playlistId, String newPlaylistName) {
+        try {
             String update = "UPDATE spotitube.playlist SET name = '" + newPlaylistName + "' WHERE playlist_id = " + playlistId + ";";
-                connection.createStatement().executeUpdate(update);
+            connection.createStatement().executeUpdate(update);
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     public void setPlaylist(String playlistName, String token) {
-        String add = "INSERT INTO spotitube.playlist (name, owner, token) VALUES ('" + playlistName + "', true, " + token + ")";
         try {
+            String add = "INSERT INTO spotitube.playlist (name, owner, token) VALUES ('" + playlistName + "', true, " + token + ")";
             connection.createStatement().executeUpdate(add);
         }
         catch (SQLException e) {
@@ -71,8 +77,8 @@ public class PlaylistsDAO {
     }
 
     public void deletePlaylists(int playListId) {
-        String delete = "DELETE FROM spotitube.playlist WHERE playlist_id = " + playListId + ";";
         try {
+            String delete = "DELETE FROM spotitube.playlist WHERE playlist_id = " + playListId + ";";
             connection.createStatement().executeUpdate(delete);
         }
         catch (SQLException e) {
