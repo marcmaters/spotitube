@@ -7,12 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="699a4120-16ee-45b9-97a0-b0fdeddaf90d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/nl/han/dea/marc/playlist/PlayListControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/han/dea/marc/config/JDBCConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/han/dea/marc/config/JDBCConnector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/han/dea/marc/controllers/LogInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/han/dea/marc/controllers/LogInController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/han/dea/marc/datasources/PlaylistsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/han/dea/marc/datasources/PlaylistsDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/han/dea/marc/datasources/TracksDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/han/dea/marc/datasources/TracksDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/han/dea/marc/datasources/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/han/dea/marc/datasources/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/nl/han/dea/marc/login/LogInControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/nl/han/dea/marc/login/LogInControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spotitube.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/spotitube.war" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,6 +20,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Spotitube$PlayListControllerTest.ic" NAME="PlayListControllerTest Coverage Results" MODIFIED="1540820526234" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>nl.han.dea.marc.playlist.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/Spotitube$LogInControllerTest.ic" NAME="LogInControllerTest Coverage Results" MODIFIED="1538647072159" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>nl.han.dea.marc.login.*</FILTER>
     </SUITE>
@@ -108,17 +109,17 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="20" />
-          <entry key="java" value="14583" />
+          <entry key="java" value="14861" />
           <entry key="properties" value="123" />
-          <entry key="txt" value="910" />
+          <entry key="txt" value="933" />
           <entry key="xml" value="78" />
           <entry key="yml" value="143" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="14580" />
-          <entry key="PLAIN_TEXT" value="930" />
+          <entry key="JAVA" value="14858" />
+          <entry key="PLAIN_TEXT" value="953" />
           <entry key="Properties" value="123" />
           <entry key="SQL" value="3" />
           <entry key="XML" value="78" />
@@ -128,7 +129,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="4" />
-          <entry key="java" value="195" />
+          <entry key="java" value="199" />
           <entry key="properties" value="3" />
           <entry key="sql" value="2" />
           <entry key="uml" value="1" />
@@ -139,7 +140,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="4" />
-          <entry key="JAVA" value="195" />
+          <entry key="JAVA" value="199" />
           <entry key="Properties" value="3" />
           <entry key="Scratch" value="2" />
           <entry key="UML" value="1" />
@@ -151,29 +152,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/nl/han/dea/marc/controllers/PlaylistController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="25" column="32" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/nl/han/dea/marc/config/JDBCConnector.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/nl/han/dea/marc/login/LogInControllerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="24" column="48" lean-forward="true" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/nl/han/dea/marc/datasources/TracksDAO.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/nl/han/dea/marc/playlist/PlayListControllerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-569">
-              <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/nl/han/dea/marc/services/TrackService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="14" column="41" lean-forward="true" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/nl/han/dea/marc/controllers/TrackController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="24" column="41" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
+            <state relative-caret-position="227">
+              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -209,8 +225,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/nl/han/dea/marc/playlist/Playlist.java" />
-        <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/src/main/java/nl/han/dea/marc/playlist/PlaylistDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/nl/han/dea/marc/playlist/PlaylistsDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/nl/han/dea/marc/playlist/TrackDAO.java" />
@@ -235,7 +249,6 @@
         <option value="$PROJECT_DIR$/src/main/java/nl/han/dea/marc/config/LoadDriver.java" />
         <option value="$PROJECT_DIR$/src/main/java/nl/han/dea/marc/config/JDBC_ReadDataFromProps.java" />
         <option value="$PROJECT_DIR$/src/main/java/nl/han/dea/marc/config/app.properties" />
-        <option value="$PROJECT_DIR$/src/test/java/nl/han/dea/marc/login/LogInControllerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/nl/han/dea/marc/controller/LogInController.java" />
         <option value="$PROJECT_DIR$/src/main/java/nl/han/dea/marc/model/Playlist.java" />
         <option value="$PROJECT_DIR$/src/main/java/nl/han/dea/marc/model/PlaylistDTO.java" />
@@ -256,10 +269,13 @@
         <option value="$PROJECT_DIR$/src/main/java/nl/han/dea/marc/services/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/nl/han/dea/marc/services/PlayListService.java" />
         <option value="$PROJECT_DIR$/src/main/java/nl/han/dea/marc/controllers/PlaylistController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/han/dea/marc/config/JDBCConnector.java" />
         <option value="$PROJECT_DIR$/src/main/java/nl/han/dea/marc/controllers/LogInController.java" />
         <option value="$PROJECT_DIR$/src/main/java/nl/han/dea/marc/datasources/PlaylistsDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/nl/han/dea/marc/datasources/TracksDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/han/dea/marc/config/JDBCConnector.java" />
+        <option value="$PROJECT_DIR$/src/test/java/nl/han/dea/marc/login/PlayListControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/nl/han/dea/marc/login/LogInControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/nl/han/dea/marc/playlist/PlayListControllerTest.java" />
       </list>
     </option>
   </component>
@@ -391,6 +407,36 @@
               <item name="marc" type="462c0819:PsiDirectoryNode" />
               <item name="services" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Spotitube" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Spotitube" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Spotitube" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Spotitube" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Spotitube" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Spotitube" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="marc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Spotitube" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Spotitube" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="marc" type="462c0819:PsiDirectoryNode" />
+              <item name="playlist" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -401,7 +447,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540818260309" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540820591352" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/uml" />
@@ -436,7 +482,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TomEE Server.SpotitubeServer">
+  <component name="RunManager" selected="JUnit.PlayListControllerTest">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -504,6 +550,21 @@
       <option name="MAIN_CLASS_NAME" value="nl.han.dea.marc.login.LogInControllerTest" />
       <option name="METHOD_NAME" value="testIfUserServiceAgreesReturnsOk" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlayListControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spotitube" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="nl.han.dea.marc.playlist.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="nl.han.dea.marc.playlist" />
+      <option name="MAIN_CLASS_NAME" value="nl.han.dea.marc.playlist.PlayListControllerTest" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -610,9 +671,11 @@
       <item itemvalue="JUnit.LogInControllerTest.testIfUserServiceAgreesReturnsOk" />
       <item itemvalue="JUnit.LogInControllerTest" />
       <item itemvalue="Application.JDBCConnector" />
+      <item itemvalue="JUnit.PlayListControllerTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PlayListControllerTest" />
         <item itemvalue="Application.JDBCConnector" />
         <item itemvalue="Application.TrackOrganizer" />
         <item itemvalue="JUnit.LogInControllerTest" />
@@ -651,7 +714,7 @@
       <workItem from="1540376863847" duration="59883000" />
       <workItem from="1540579546054" duration="6709000" />
       <workItem from="1540592146436" duration="55132000" />
-      <workItem from="1540806039579" duration="7857000" />
+      <workItem from="1540806039579" duration="10271000" />
     </task>
     <task id="LOCAL-00001" summary="Login code">
       <created>1538127676494</created>
@@ -898,13 +961,17 @@
       <option name="project" value="LOCAL" />
       <updated>1540816569880</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="refactor volgens Sonarcloud">
+      <created>1540818362964</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1540818362964</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LogInControllerTest - 2018.10.04 at 11h 37m 36s.xml">
-      <configuration name="LogInControllerTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="LogInControllerTest - 2018.10.04 at 11h 39m 00s.xml">
       <configuration name="LogInControllerTest" configurationId="JUnit" />
     </history-entry>
@@ -932,16 +999,19 @@
     <history-entry file="LogInControllerTest - 2018.10.04 at 11h 58m 49s.xml">
       <configuration name="LogInControllerTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="PlayListControllerTest - 2018.10.29 at 14h 42m 34s.xml">
+      <configuration name="PlayListControllerTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="240989000" />
+    <option name="totallyTimeSpent" value="243403000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="simpleUML" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22087745" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22087745" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -976,7 +1046,7 @@
       <window_info anchor="right" id="Theme Preview" order="9" />
       <window_info anchor="right" id="CDI" order="10" />
       <window_info anchor="right" id="Bean Validation" order="11" />
-      <window_info anchor="right" id="Coverage" order="12" side_tool="true" weight="0.13086233" />
+      <window_info active="true" anchor="right" id="Coverage" order="12" side_tool="true" visible="true" weight="0.13086233" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29727685" />
@@ -1027,7 +1097,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
-    <MESSAGE value="Login code" />
     <MESSAGE value="Start met playlist via PlayListController en PlaylistDTO, moet ook nog een LenghtDTO komen." />
     <MESSAGE value="Klasse Playlist en Track gemaakt, volgende keer verder met DAO aanvullen." />
     <MESSAGE value="Tests gemaakt voor LogInController" />
@@ -1052,7 +1121,8 @@
     <MESSAGE value="user + password wordt uit database gehaald" />
     <MESSAGE value="token inzetbaar voor meerdere users" />
     <MESSAGE value="refactor playlistDAO" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor playlistDAO" />
+    <MESSAGE value="refactor volgens Sonarcloud" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor volgens Sonarcloud" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -1211,13 +1281,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/nl/han/dea/marc/login/LogInControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="16" column="64" lean-forward="true" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/sql/Statement.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
@@ -1236,6 +1299,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="28" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1297,27 +1363,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/han/dea/marc/controllers/PlaylistController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="25" column="69" lean-forward="true" selection-start-line="25" selection-start-column="69" selection-end-line="25" selection-end-column="69" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/han/dea/marc/config/JDBCConnector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="16" column="12" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
-          <folding>
-            <element signature="e#268#269#0" expanded="true" />
-            <element signature="e#332#333#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/nl/han/dea/marc/controllers/LogInController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="687">
@@ -1338,13 +1383,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/han/dea/marc/controllers/TrackController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/han/dea/marc/datasources/TracksDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="24" column="41" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="299">
+          <caret line="22" column="62" selection-start-line="22" selection-start-column="62" selection-end-line="22" selection-end-column="62" />
         </state>
       </provider>
     </entry>
@@ -1355,10 +1397,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/han/dea/marc/datasources/TracksDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/han/dea/marc/controllers/TrackController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-569">
-          <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+        <state relative-caret-position="279">
+          <caret line="24" column="41" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/han/dea/marc/config/JDBCConnector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/han/dea/marc/controllers/PlaylistController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="25" column="32" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/nl/han/dea/marc/login/LogInControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="24" column="48" lean-forward="true" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/nl/han/dea/marc/playlist/PlayListControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

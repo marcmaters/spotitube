@@ -22,7 +22,7 @@ public class LogInControllerTest {
 
         LogInRequestDTO logInRequestDTO = new LogInRequestDTO();
         logInRequestDTO.setUser("Marc");
-        logInRequestDTO.setPassword("test");
+        logInRequestDTO.setPassword("password");
         //Test
         Response test = logInController.login(logInRequestDTO);
 
@@ -49,5 +49,7 @@ public class LogInControllerTest {
         //Verify
         Assert.assertEquals(401, test.getStatus());
     }
+
+
 
 }
