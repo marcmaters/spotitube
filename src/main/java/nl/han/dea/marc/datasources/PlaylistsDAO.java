@@ -18,8 +18,8 @@ public class PlaylistsDAO {
         connection = JDBCConnector.CONNECTION;
     }
 
-    public List<PlaylistDTO> getPlaylists() {
-        try (ResultSet rsPlaylist = connection.createStatement().executeQuery("select * from spotitube.playlist")) {
+    public List<PlaylistDTO> getPlaylists(String token) {
+        try (ResultSet rsPlaylist = connection.createStatement().executeQuery("select playlist_id, name, owner from spotitube.playlist where token = "+token+";")) {
             ArrayList<PlaylistDTO> playlists = new ArrayList<>();
             while (rsPlaylist.next()) {
                 PlaylistDTO playlist = new PlaylistDTO();
@@ -37,7 +37,7 @@ public class PlaylistsDAO {
 
     public int getLengthFromPlaylists() {
         int totalLength = 0;
-        try (ResultSet rsPlaylist = connection.createStatement().executeQuery("select * from spotitube.playlist")) {
+        try (ResultSet rsPlaylist = connection.createStatement().executeQuery("select playlist_id, name, owner from spotitube.playlist")) {
             while (rsPlaylist.next()) {
                 String sumQuery = "select sum(duration) from spotitube.track where track_id in (select track_id from spotitube.tracksinplaylist where playlist_id = " + rsPlaylist.getInt(1) + ")";
                 try (ResultSet rsLength = connection.createStatement().executeQuery(sumQuery)) {
@@ -64,8 +64,8 @@ public class PlaylistsDAO {
         }
     }
 
-    public void setPlaylist (String playlistName) {
-        String add = "INSERT INTO spotitube.playlist (name, owner) VALUES ('"+playlistName+"', true)";
+    public void setPlaylist (String playlistName, String token) {
+        String add = "INSERT INTO spotitube.playlist (name, owner, token) VALUES ('"+playlistName+"', true, "+token+")";
         try {
             connection.createStatement().executeUpdate(add);
         }

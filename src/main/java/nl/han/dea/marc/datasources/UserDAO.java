@@ -26,4 +26,12 @@ public class UserDAO {
         getPassword = rsPassword.getString(1);
         return getPassword;
     }
+
+    public String getToken(String user, String password) throws SQLException {
+        String getToken;
+        ResultSet rsToken = connection.createStatement().executeQuery("select token from spotitube.user where user = '"+user+"' and password = '"+password+"';");
+        rsToken.next();
+        getToken = rsToken.getString(1);
+        return getToken;
+    }
 }

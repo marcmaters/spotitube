@@ -19,7 +19,7 @@ public class TrackController {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response getTracks(@QueryParam("token") String token) {
-        if (token.equals("test")) {
+        if (token.equals("1234")) {
             TracksDTO tracksDTO = null;
             try {
                 tracksDTO = trackService.getAllTracks();

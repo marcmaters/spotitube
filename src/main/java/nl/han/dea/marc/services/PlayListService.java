@@ -12,9 +12,9 @@ public class PlayListService {
 
     PlaylistsDAO playlistsDAO;
 
-    public PlaylistsDTO getPlaylists() {
+    public PlaylistsDTO getPlaylists(String token) {
         PlaylistsDTO playlistsDTO = new PlaylistsDTO();
-        playlistsDTO.setPlaylists(playlistsDAO.getPlaylists());
+        playlistsDTO.setPlaylists(playlistsDAO.getPlaylists(token));
         playlistsDTO.setLength(playlistsDAO.getLengthFromPlaylists());
         return playlistsDTO;
     }
@@ -23,8 +23,8 @@ public class PlayListService {
         playlistsDAO.updatePlaylists(playListId, newPlaylistName);
     }
 
-    public void addPlaylist(String playlistName) {
-        playlistsDAO.setPlaylist(playlistName);
+    public void addPlaylist(String playlistName, String token) {
+        playlistsDAO.setPlaylist(playlistName, token);
     }
 
     public void deletePlaylist(int playListId) {
@@ -37,7 +37,7 @@ public class PlayListService {
         for(TrackDTO track : tracksDTO.getTracks()){
             if(selectedTrack.getId() == track.getId()){
                 alreadyExists = true;
-                return;
+
             }
         }
         if(!alreadyExists){
@@ -49,8 +49,3 @@ public class PlayListService {
     public void setPlaylistsDAO(PlaylistsDAO playlistsDAO) {this.playlistsDAO = playlistsDAO;}
 
 }
-
-//public return playlistsDTO
-//wordt uit de DAO gehaald
-//wordt de DAO geinjecteerd
-//deze klasse wordt in controllers geinjecteerd

@@ -22,7 +22,7 @@ public class LogInController {
         if (userService.authenticate(logInRequestDTO.getUser(), logInRequestDTO.getPassword())) {
             LogInResponseDTO logInResponseDTO = new LogInResponseDTO();
             logInResponseDTO.setUser(logInRequestDTO.getUser());
-            logInResponseDTO.setToken(userService.getToken());
+            logInResponseDTO.setToken(userService.getToken(logInRequestDTO.getUser(), logInRequestDTO.getPassword()));
 
             return Response.ok(logInResponseDTO).build();
         }

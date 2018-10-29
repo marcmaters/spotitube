@@ -24,34 +24,24 @@ public class PlaylistController {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response getPlaylists(@QueryParam("token") String token) {
-        if (token.equals("test")) {
-            PlaylistsDTO playlistsDTO = playListService.getPlaylists();
-            return Response.ok(playlistsDTO).build();
-        }
-        else {
-            return Response.status(401).build();
-        }
+        PlaylistsDTO playlistsDTO = playListService.getPlaylists(token);
+        return Response.ok(playlistsDTO).build();
     }
 
     @POST
     @Consumes({MediaType.APPLICATION_JSON})
     public Response addPlaylist(String body, @QueryParam("token") String token) {
-        if (token.equals("test")) {
-            ObjectMapper mapper = new ObjectMapper();
-            String playlistName = null;
-            try {
-                playlistName = mapper.readValue(body, PlaylistDTO.class).getName();
-            }
-            catch (IOException e) {
-                e.printStackTrace();
-            }
-            playListService.addPlaylist(playlistName);
-            PlaylistsDTO playlistsDTO = playListService.getPlaylists();
-            return Response.ok(playlistsDTO).build();
+        ObjectMapper mapper = new ObjectMapper();
+        String playlistName = null;
+        try {
+            playlistName = mapper.readValue(body, PlaylistDTO.class).getName();
         }
-        else {
-            return Response.status(401).build();
+        catch (IOException e) {
+            e.printStackTrace();
         }
+        playListService.addPlaylist(playlistName, token);
+        PlaylistsDTO playlistsDTO = playListService.getPlaylists(token);
+        return Response.ok(playlistsDTO).build();
     }
 
     @GET
@@ -68,59 +58,44 @@ public class PlaylistController {
     @Produces({MediaType.APPLICATION_JSON})
     @Consumes({MediaType.APPLICATION_JSON})
     public Response addTrackToPlaylist(String body, @PathParam("id") int id, @QueryParam("token") String token) throws SQLException {
-        if (token.equals("test")) {
-            ObjectMapper mapper = new ObjectMapper();
-            TrackDTO track = null;
-            try {
-                track = mapper.readValue(body, TrackDTO.class);
-            }
-            catch (IOException e) {
-                e.printStackTrace();
-            }
-            playListService.addTrackToPlaylist(id, track, tracksService);
-
-            TracksDTO tracksDTO = tracksService.getTracks(id);
-            return Response.ok(tracksDTO).build();
+        ObjectMapper mapper = new ObjectMapper();
+        TrackDTO track = null;
+        try {
+            track = mapper.readValue(body, TrackDTO.class);
         }
-        else {
-            return Response.status(401).build();
+        catch (IOException e) {
+            e.printStackTrace();
         }
+        playListService.addTrackToPlaylist(id, track, tracksService);
+        TracksDTO tracksDTO = tracksService.getTracks(id);
+        return Response.ok(tracksDTO).build();
     }
 
     @PUT
     @Path("{id}")
     @Consumes({MediaType.APPLICATION_JSON})
     public Response editPlaylist(String body, @QueryParam("token") String token, @PathParam("id") int id) {
-        if (token.equals("test")) {
-            ObjectMapper mapper = new ObjectMapper();
-            String newPlaylistName = null;
-            try {
-                newPlaylistName = mapper.readValue(body, PlaylistDTO.class).getName();
-            }
-            catch (IOException e) {
-                e.printStackTrace();
-            }
-            playListService.updatePlaylist(id, newPlaylistName);
-            PlaylistsDTO playlistsDTO = playListService.getPlaylists();
-            return Response.ok(playlistsDTO).build();
+
+        ObjectMapper mapper = new ObjectMapper();
+        String newPlaylistName = null;
+        try {
+            newPlaylistName = mapper.readValue(body, PlaylistDTO.class).getName();
         }
-        else {
-            return Response.status(401).build();
+        catch (IOException e) {
+            e.printStackTrace();
         }
+        playListService.updatePlaylist(id, newPlaylistName);
+        PlaylistsDTO playlistsDTO = playListService.getPlaylists(token);
+        return Response.ok(playlistsDTO).build();
     }
 
     @DELETE
     @Path("{id}")
     @Consumes({MediaType.APPLICATION_JSON})
     public Response deletePlaylist(@QueryParam("token") String token, @PathParam("id") int id) {
-        if (token.equals("test")) {
-            playListService.deletePlaylist(id);
-            PlaylistsDTO playlistsDTO = playListService.getPlaylists();
-            return Response.ok(playlistsDTO).build();
-        }
-        else {
-            return Response.status(401).build();
-        }
+        playListService.deletePlaylist(id);
+        PlaylistsDTO playlistsDTO = playListService.getPlaylists(token);
+        return Response.ok(playlistsDTO).build();
     }
 
     @Inject
