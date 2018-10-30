@@ -1,6 +1,5 @@
 package nl.han.dea.marc.dtos;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class PlaylistDTO {

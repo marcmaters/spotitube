@@ -108,7 +108,7 @@
           <entry key="dummy" value="20" />
           <entry key="java" value="14861" />
           <entry key="properties" value="123" />
-          <entry key="txt" value="985" />
+          <entry key="txt" value="1011" />
           <entry key="xml" value="78" />
           <entry key="yml" value="143" />
         </counts>
@@ -116,7 +116,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="14858" />
-          <entry key="PLAIN_TEXT" value="1005" />
+          <entry key="PLAIN_TEXT" value="1031" />
           <entry key="Properties" value="123" />
           <entry key="SQL" value="3" />
           <entry key="XML" value="78" />
@@ -444,7 +444,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540898682571" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540898991428" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/uml" />
@@ -711,7 +711,7 @@
       <workItem from="1540376863847" duration="59883000" />
       <workItem from="1540579546054" duration="6709000" />
       <workItem from="1540592146436" duration="55132000" />
-      <workItem from="1540806039579" duration="11073000" />
+      <workItem from="1540806039579" duration="11319000" />
     </task>
     <task id="LOCAL-00001" summary="Login code">
       <created>1538127676494</created>
@@ -979,7 +979,14 @@
       <option name="project" value="LOCAL" />
       <updated>1540820731437</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Final commit and push">
+      <created>1540898819308</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1540898819308</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1015,10 +1022,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="244205000" />
+    <option name="totallyTimeSpent" value="244451000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="simpleUML" />
@@ -1108,7 +1115,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
-    <MESSAGE value="Klasse Playlist en Track gemaakt, volgende keer verder met DAO aanvullen." />
     <MESSAGE value="Tests gemaakt voor LogInController" />
     <MESSAGE value="Tracks and playlists aangemaakt" />
     <MESSAGE value="Playlists tonend op de site" />
@@ -1133,7 +1139,8 @@
     <MESSAGE value="refactor playlistDAO" />
     <MESSAGE value="refactor volgens Sonarcloud" />
     <MESSAGE value="Unit test toegevoegd voor PlaylistController" />
-    <option name="LAST_COMMIT_MESSAGE" value="Unit test toegevoegd voor PlaylistController" />
+    <MESSAGE value="Final commit and push" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final commit and push" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
