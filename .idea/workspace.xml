@@ -7,10 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="699a4120-16ee-45b9-97a0-b0fdeddaf90d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/nl/han/dea/marc/playlist/PlayListControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/nl/han/dea/marc/login/LogInControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/nl/han/dea/marc/login/LogInControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/spotitube.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/spotitube.war" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -111,7 +108,7 @@
           <entry key="dummy" value="20" />
           <entry key="java" value="14861" />
           <entry key="properties" value="123" />
-          <entry key="txt" value="933" />
+          <entry key="txt" value="985" />
           <entry key="xml" value="78" />
           <entry key="yml" value="143" />
         </counts>
@@ -119,7 +116,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="14858" />
-          <entry key="PLAIN_TEXT" value="953" />
+          <entry key="PLAIN_TEXT" value="1005" />
           <entry key="Properties" value="123" />
           <entry key="SQL" value="3" />
           <entry key="XML" value="78" />
@@ -188,8 +185,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/nl/han/dea/marc/playlist/PlayListControllerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="184">
+              <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -447,7 +444,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540820594438" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540898682571" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/uml" />
@@ -714,7 +711,7 @@
       <workItem from="1540376863847" duration="59883000" />
       <workItem from="1540579546054" duration="6709000" />
       <workItem from="1540592146436" duration="55132000" />
-      <workItem from="1540806039579" duration="10271000" />
+      <workItem from="1540806039579" duration="11073000" />
     </task>
     <task id="LOCAL-00001" summary="Login code">
       <created>1538127676494</created>
@@ -968,7 +965,21 @@
       <option name="project" value="LOCAL" />
       <updated>1540818362964</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Unit test toegevoegd voor PlaylistController">
+      <created>1540820625301</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1540820625301</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Unit test toegevoegd voor PlaylistController">
+      <created>1540820731437</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1540820731437</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1004,7 +1015,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="243403000" />
+    <option name="totallyTimeSpent" value="244205000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -1097,7 +1108,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
-    <MESSAGE value="Start met playlist via PlayListController en PlaylistDTO, moet ook nog een LenghtDTO komen." />
     <MESSAGE value="Klasse Playlist en Track gemaakt, volgende keer verder met DAO aanvullen." />
     <MESSAGE value="Tests gemaakt voor LogInController" />
     <MESSAGE value="Tracks and playlists aangemaakt" />
@@ -1122,7 +1132,8 @@
     <MESSAGE value="token inzetbaar voor meerdere users" />
     <MESSAGE value="refactor playlistDAO" />
     <MESSAGE value="refactor volgens Sonarcloud" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor volgens Sonarcloud" />
+    <MESSAGE value="Unit test toegevoegd voor PlaylistController" />
+    <option name="LAST_COMMIT_MESSAGE" value="Unit test toegevoegd voor PlaylistController" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -1436,8 +1447,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/nl/han/dea/marc/playlist/PlayListControllerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="184">
+          <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
